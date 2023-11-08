@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    * {
+        @apply p-0 m-0 box-border;
+    }
+
+    body {
+        @apply font-montserrat font-normal leading-normal bg-body-bg text-txt-color flex justify-center mt-0 sx:my-7;
+    }
+
+    button {
+        @apply cursor-pointer;
+    }
+
+    .calculator {
+        @apply p-5 h-[600px] sx:w-[330px] xs:w-[360px] lg:w-[350px]  overflow-hidden rounded-2xl bg-calc-bg shadow-2xl shadow-blue-100/60 flex flex-col justify-end;
+    }
+
+    .calculator__btns {
+        @apply grid grid-cols-4 gap-3;
+    }
+
+    .calculator__btns button {
+        @apply rounded-2xl lg:text-lg font-semibold bg-transparent text-txt-color sx:text-base;
+    }
+
+    .calculator__btns button:last-child {
+        @apply rounded-xl text-txt-white bg-black;
+    }
+
+    .calculator__btns .btn__op {
+        @apply text-white bg-black;
+    }
+
+    .calculator__btns .btn__num {
+        @apply bg-white shadow-xl rounded-2xl shadow-slate-200 hover:shadow-lg hover:shadow-slate-200/60
+    }
+
+    .calculator__result {
+        @apply relative text-right flex flex-col items-end justify-end mb-4;
+    }
+
+    .calculator__result__exp {
+        @apply text-3xl font-medium leading-none origin-bottom-right transition ease-in-out duration-75 text-calc-res-color;
+    }
+
+    .calculator__result__exp:last-child {
+        @apply absolute right-0;
+    }
+
+    .calculator__result__exp span {
+        @apply inline-block overflow-hidden transition ease-in-out duration-75;
+    }
+}
